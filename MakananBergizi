@@ -1,0 +1,64 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package makananbergizi;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author moklet gaming 1
+ */
+public class MakananBergizi {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        String a;
+        int hargamakanan=0, uang;
+        
+        System.out.println("Pilih menu ");
+        System.out.println("burger");
+        System.out.println("bakso");
+        System.out.println("mie setan");
+        System.out.println("ayam");
+        System.out.println("nasi goreng");
+        System.out.println("--------------------");
+        a= input.next();
+        
+        switch(a){
+            case "1":
+                System.out.println("50.000"); hargamakanan = 50000;
+                break;
+            case "2":
+                System.out.println("34.000"); hargamakanan = 34000;
+                break;
+            case "3":
+                System.out.println("15.000"); hargamakanan = 15000;
+                break;
+            case "4":
+                System.out.println("32.000"); hargamakanan = 32000;
+                break;
+            case "5":
+                System.out.println("27.000"); hargamakanan = 27000;
+                break;
+                
+        }
+               System.out.println("masukkan uang!!!!!");
+               uang= input.nextInt();
+               if(uang>hargamakanan) {
+                   System.out.println("Uang kembalian anda adalah "+(uang-hargamakanan));
+               } else {
+                   System.out.println("Mohon maaf uang anda tidak cukup!");
+               }
+        
+        
+                
+    }
+    
+}
