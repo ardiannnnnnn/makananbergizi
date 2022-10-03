@@ -1,0 +1,34 @@
+Scanner input = new Scanner (System.in);
+        
+        int i,jumlahdata;
+        String [] nama = new String[10];
+        String [] sekolah = new String [10];
+        String [] alamat = new String [10];
+        String ulang;
+        
+        do{
+        System.out.println("masukkan jumlah data : ");
+        jumlahdata = input.nextInt();
+        for (i = 1 ; i <=jumlahdata;i++){
+            System.out.println("masukkan data ke : "+i);
+            System.out.println("masukkan nama anda : ");
+            nama[i] = input.next();
+            System.out.println("masukkan nama sekolah anda : ");
+            sekolah[i] = input.next();
+            System.out.println("masukkan alamat anda : ");
+            alamat[i] = input.next();
+        }
+        System.out.println("\n\t==DATA SISWA==");
+        System.out.println("------------------------");
+        for(i=1 ; i <= jumlahdata;i++){
+            System.out.println("Data ke - "+i);
+            System.out.println("Nama siswa :  "+nama[i]);
+            System.out.println("Asal sekolah : "+sekolah[i]);
+            System.out.println("alamat siswa : "+ alamat[i]);
+        }
+        System.out.println("mau input lagi  [Y][N] ? : ");
+            ulang = input.next();
+        }
+        while(ulang.equals("Y") || ulang.equals("y"));
+    }
+}
