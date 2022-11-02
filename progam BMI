@@ -1,0 +1,61 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ */
+package com.mycompany.latihanukl;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author moklet gaming 1
+ */
+public class Latihanukl {
+
+    public static void main(String[] args) {
+
+
+        Scanner input = new Scanner(System.in);
+        int gender;
+        double berat, tinggi, bmi, meter;
+        double rumus;
+     
+        System.out.println("PROGRAM JAVA MENGHITUNG BERAT BADAN IDEAL DENGAN BMI ");
+        System.out.println("............................................");
+        System.out.print ("Masukan Jenis Kelamin (1.Laki-laKi)| (2.Perempuan): ");
+        gender = input.nextInt();
+        System.out.print ("Masukan Berat: ");
+        berat = input.nextDouble();
+        System.out.print ("Masukan Tinggi: ");
+        tinggi = input.nextDouble();
+        meter=tinggi/100;
+   
+        bmi=(berat/(meter*meter));
+  
+        System.out.println("---------------------------------");
+        System.out.print("BMI : "+bmi+" ");
+        
+        if (bmi<18.5){
+            System.out.println("(Kurus)");
+        }else if (bmi<=24.9){
+            System.out.println("(Normal)");
+        }else if (bmi<29.9){
+            System.out.println("(Overweight)"); 
+        }else {
+            System.out.println("(Obesitas)"); 
+        }
+        
+        switch(gender){
+            case 1 : rumus=((tinggi-100)-(0.10*(tinggi-100))); 
+            break;
+            case 2 : rumus=((tinggi-100)-(0.15*(tinggi-100))); 
+            break;
+            default : rumus=0;
+        }
+    
+        int hasil = (int)rumus;
+        System.out.println("Berat badan ideal anda : "+hasil+" Kg");
+   
+
+    }
+}
